@@ -63,8 +63,10 @@
 ;; Packages
 ;; Without this comment Emacs25 adds (package-initialize) here
 (setq package-archives
-      '(("gnu"   . "http://elpa.gnu.org/packages/")
-        ("melpa" . "http://melpa.org/packages/")))
+      '(("melpa" . "http://melpa.org/packages/")
+        ("gnu" . "http://elpa.gnu.org/packages/")
+        ("org" . "http://orgmode.org/elpa/")
+        ("melpa-stable" . "http://stable.melpa.org/packages/")))
 
 ;; Initialize packages
 (unless (bound-and-true-p package--initialized) ; To avoid warnings in 27
@@ -95,36 +97,9 @@
         exec-path-from-shell-arguments '("-l"))
   (exec-path-from-shell-initialize))
 
-;; Misc
-(setq-default fill-column 70)
 
-;; Indentation no tab
-(setq-default indent-tabs-mode nil)
-
-;; show column number
-(setq column-number-mode t)
-
-;; Remove menu bar and toolbar
-(menu-bar-mode -1)
-(toggle-scroll-bar -1)
-(tool-bar-mode -1)
-
-(fset 'yes-or-no-p 'y-or-n-p)
-
-;; split and follow
-(global-set-key "\C-x2" (lambda () (interactive) (split-window-vertically) (other-window 1)))
-(global-set-key "\C-x3" (lambda () (interactive) (split-window-horizontally) (other-window 1)))
-
-;; type with a selected region removes it
-(delete-selection-mode t)
-
-;; highlight current line
-(global-hl-line-mode t)
-
-;; Programming
-(show-paren-mode 1)
-
+(require 'init-better-defaults)
 (require 'init-helm)
-
+(require 'init-programming)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
