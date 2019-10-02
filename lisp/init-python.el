@@ -31,9 +31,9 @@
 ;;; Code:
 
 ;; enable elpy
-(use-package elpy
-  :init
-  (elpy-enable))
+;; (use-package elpy
+;;   :init
+;;   (elpy-enable))
 
 (provide 'init-python)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
