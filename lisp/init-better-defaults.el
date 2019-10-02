@@ -44,23 +44,49 @@
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
+;; Suppress GUI features
+(setq use-file-dialog nil
+      use-dialog-box nil
+      inhibit-startup-screen t
+      inhibit-startup-echo-area-message t)
+
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; split and follow
+;; Always follow when split window
 (global-set-key "\C-x2" (lambda () (interactive) (split-window-vertically) (other-window 1)))
 (global-set-key "\C-x3" (lambda () (interactive) (split-window-horizontally) (other-window 1)))
+
+;; Restore old window configurations
+(use-package winner
+  :ensure nil
+  :commands (winner-undo winner-redo)
+  :hook (after-init . winner-mode)
+  :init (setq winner-boring-buffers '("*Completions*"
+                                      "*Compile-Log*"
+                                      "*inferior-lisp*"
+                                      "*Fuzzy Completions*"
+                                      "*Apropos*"
+                                      "*Help*"
+                                      "*cvs*"
+                                      "*Buffer List*"
+                                      "*Ibuffer*"
+                                      "*esh command on file*")))
+
 
 ;; type with a selected region removes it
 (delete-selection-mode t)
 
+;; display line number
+(global-linum-mode)
+(setq linum-format "%4d ")
+
 ;; highlight current line
- (global-hl-line-mode nil)
+(global-hl-line-mode nil)
 
 ;; better defaults for buffer management 
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets) ; Show path if names are same
 (setq adaptive-fill-regexp "[ t]+|[ t]*([0-9]+.|*+)[ t]*")
 (setq adaptive-fill-first-line-regexp "^* *$")
-(setq delete-by-moving-to-trash t)         ; Deleting files go to OS's trash folder
 (setq make-backup-files nil)               ; Forbide to make backup files
 (setq auto-save-default nil)               ; Disable auto save
 
