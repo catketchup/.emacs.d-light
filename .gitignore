@@ -3,3 +3,4 @@ custom.el
 recentf*
 transient
 auto-save-list
+elpy

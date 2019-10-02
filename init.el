@@ -101,5 +101,7 @@
 (require 'init-better-defaults)
 (require 'init-helm)
 (require 'init-programming)
+(require 'init-python)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here

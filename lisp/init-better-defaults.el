@@ -72,7 +72,6 @@
                                       "*Ibuffer*"
                                       "*esh command on file*")))
 
-
 ;; type with a selected region removes it
 (delete-selection-mode t)
 
@@ -89,6 +88,10 @@
 (setq adaptive-fill-first-line-regexp "^* *$")
 (setq make-backup-files nil)               ; Forbide to make backup files
 (setq auto-save-default nil)               ; Disable auto save
+
+;; dired always recursive
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
 
 ;; better default theme for terminal
 (load-theme 'manoj-dark t)
