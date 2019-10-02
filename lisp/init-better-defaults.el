@@ -56,21 +56,6 @@
 ;; highlight current line
  (global-hl-line-mode nil)
 
-;; show parenthesis
-(use-package paren
-  :ensure nil
-  :hook (after-init . show-paren-mode)
-  :config
-  (setq show-paren-when-point-inside-paren t
-        show-paren-when-point-in-periphery t)
-
-  ;; Highlight enclosing parenthesis as well
-  (define-advice show-paren-function (:around (fn) fix-show-paren-function)
-    (cond ((looking-at-p "\\s(") (funcall fn))
-          (t (save-excursion
-               (ignore-errors (backward-up-list))
-               (funcall fn))))))
-
 ;; better defaults for buffer management 
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets) ; Show path if names are same
 (setq adaptive-fill-regexp "[ t]+|[ t]*([0-9]+.|*+)[ t]*")
@@ -79,6 +64,8 @@
 (setq make-backup-files nil)               ; Forbide to make backup files
 (setq auto-save-default nil)               ; Disable auto save
 
+;; better default theme for terminal
+(load-theme 'manoj-dark t)
 
 (provide 'init-better-defaults)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
