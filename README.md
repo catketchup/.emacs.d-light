@@ -1,2 +1,2 @@
 # .emacs.d-light
-Lightweight configuration to use in terminal emacs
+Extra lightweight configuration to use in cluster settings without X. 
