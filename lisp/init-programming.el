@@ -148,6 +148,25 @@
   :bind (([remap move-beginning-of-line] . mwim-beginning-of-code-or-line)
          ([remap move-end-of-line] . mwim-end-of-code-or-line)))
 
+;; Jump to things in Emacs tree-style
+(use-package avy
+  :bind (("C-x :" . avy-goto-char)
+         ("M-g f" . avy-goto-line)
+         ("M-g w" . avy-goto-word-1)
+         ("M-g e" . avy-goto-word-0))
+  :hook (after-init . avy-setup-default)
+  :config (setq avy-all-windows t
+                avy-all-windows-alt t
+                avy-background t
+                avy-style 'pre))
+
+;; Automatic parenthesis pairing
+(use-package elec-pair
+  :ensure nil
+  :hook (after-init . electric-pair-mode)
+  :init (setq electric-pair-inhibit-predicate 'electric-pair-conservative-inhibit))
+
+
 (provide 'init-programming)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init-programming.el ends here
