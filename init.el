@@ -97,7 +97,6 @@
         exec-path-from-shell-arguments '("-l"))
   (exec-path-from-shell-initialize))
 
-
 (require 'init-better-defaults)
 (require 'init-helm)
 (require 'init-programming)

@@ -166,6 +166,14 @@
   :hook (after-init . electric-pair-mode)
   :init (setq electric-pair-inhibit-predicate 'electric-pair-conservative-inhibit))
 
+;; Multiple cursors
+(use-package multiple-cursors
+  :bind (("C-x >"           . mc/mark-next-like-this)
+         ("C-x <"           . mc/mark-previous-like-this)
+         ("C-c C-x <"       . mc/mark-all-like-this)
+         :map mc/keymap
+         ("C-x |" . mc/vertical-align-with-space)))
+
 
 (provide 'init-programming)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
