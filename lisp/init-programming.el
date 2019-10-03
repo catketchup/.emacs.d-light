@@ -128,16 +128,20 @@
 ;; Edit multiple regions in the same way simultaneously
 (use-package iedit
   :defines desktop-minor-mode-table
-  :bind (("C-x ," . iedit-mode)
+  :bind (("C-x ;" . iedit-mode)
          ("C-x r RET" . iedit-rectangle-mode)
-         :map isearch-mode-map ("C-x ," . iedit-mode-from-isearch)
-         :map esc-map ("C-x ," . iedit-execute-last-modification)
-         :map help-map ("C-x ," . iedit-mode-toggle-on-function))
+         :map isearch-mode-map ("C-x ;" . iedit-mode-from-isearch)
+         :map esc-map ("C-x ;" . iedit-execute-last-modification)
+         :map help-map ("C-x ;" . iedit-mode-toggle-on-function))
   :config
   ;; Avoid restoring `iedit-mode'
   (with-eval-after-load 'desktop
     (add-to-list 'desktop-minor-mode-table
                  '(iedit-mode nil))))
+
+;; Increase selected region by semantic units
+(use-package expand-region
+  :bind ("C-=" . er/expand-region))
 
 (provide 'init-programming)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
