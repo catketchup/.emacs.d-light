@@ -31,7 +31,7 @@
 ;;; Code:
 
 ;; Fill column
-(setq-default fill-column 70) 
+(setq-default fill-column 70)
 
 ;; Indentation no tab
 (setq-default indent-tabs-mode nil)
@@ -82,16 +82,23 @@
 ;; highlight current line
 (global-hl-line-mode nil)
 
-;; better defaults for buffer management 
+;; better defaults for buffer management
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets) ; Show path if names are same
 (setq adaptive-fill-regexp "[ t]+|[ t]*([0-9]+.|*+)[ t]*")
 (setq adaptive-fill-first-line-regexp "^* *$")
 (setq make-backup-files nil)               ; Forbide to make backup files
 (setq auto-save-default nil)               ; Disable auto save
 
-;; dired always recursive
+;; dired settings (always recursive)
 (setq dired-recursive-deletes 'always)
 (setq dired-recursive-copies 'always)
+(put 'dired-find-alternate-file 'disabled nil)
+
+;; Display available keybindings in popup
+(use-package which-key
+  :diminish which-key-mode
+  :bind (:map help-map ("C-h" . which-key-C-h-dispatch))
+  :hook (after-init . which-key-mode))
 
 ;; better default theme for terminal
 (load-theme 'manoj-dark t)
