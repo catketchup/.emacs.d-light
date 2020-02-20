@@ -13,11 +13,11 @@
          (hy-mode . enable-paredit-mode))
   :bind (:map paredit-mode
          ("C-t" . transpose-sexps)
-         ("C-S-t" . reverse-transpose-sexps)
+         ("C-c t" . reverse-transpose-sexps)
          ("C-o" . avy-goto-sexp-begin)
-         ("C-S-o" . avy-goto-sexp-end)
+         ("C-c o" . avy-goto-sexp-end)
          ("M-c" . paredit-convolute-sexp)
-         ("C-." . my-paredit-convolute-sexp))
+         ("C-c ." . my-paredit-convolute-sexp))
   :config
   (defun reverse-transpose-sexps (arg)
     (interactive "*p")

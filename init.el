@@ -102,7 +102,7 @@
 (require 'init-programming)
 (require 'init-python)
 (require 'init-org)
-;; (require 'init-lisp)
+(require 'init-lisp)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
