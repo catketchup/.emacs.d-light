@@ -174,6 +174,13 @@
          :map mc/keymap
          ("C-x |" . mc/vertical-align-with-space)))
 
+;; BUI for user interface
+(use-package bui)
+
+;; Use s library for string manipulation in lisp
+(use-package s
+  :ensure nil
+  :load-path "~/.emacs.d/site-lisp/s/")
 
 (provide 'init-programming)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
