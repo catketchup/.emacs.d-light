@@ -101,9 +101,9 @@
 (require 'init-helm)
 (require 'init-programming)
 (require 'init-python)
-(require 'init-publish)
 (require 'init-org)
 (require 'init-lisp)
+(require 'init-publish)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
