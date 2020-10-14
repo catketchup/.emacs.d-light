@@ -102,6 +102,8 @@
 (require 'init-programming)
 (require 'init-python)
 (require 'init-publish)
+(require 'init-org)
+(require 'init-lisp)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
