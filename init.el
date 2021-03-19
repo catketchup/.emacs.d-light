@@ -97,12 +97,13 @@
         exec-path-from-shell-arguments '("-l"))
   (exec-path-from-shell-initialize))
 
+
 (require 'init-better-defaults)
 (require 'init-helm)
 (require 'init-programming)
 (require 'init-python)
 (require 'init-org)
 (require 'init-lisp)
-
+(require 'init-utils)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here

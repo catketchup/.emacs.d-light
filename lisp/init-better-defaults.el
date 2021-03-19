@@ -41,7 +41,7 @@
 
 ;; Remove menu bar and toolbar
 (menu-bar-mode -1)
-(toggle-scroll-bar -1)
+;; (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
 ;; Suppress GUI features
