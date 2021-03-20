@@ -60,6 +60,13 @@
   :hook (after-init . yas-global-mode)
   :config (use-package yasnippet-snippets))
 
+;; yasniper -> dependency of yasniper which i use
+(use-package helm-org-rifle)
+
+(use-package yasniper
+  :ensure nil
+  :load-path "~/.emacs.d/site-lisp"
+  :bind ("C-c y" . yasniper))
 
 ;; Highlight symbols
 (use-package symbol-overlay
@@ -123,7 +130,7 @@
   "Show trailing spaces and delete on saving."
   (setq show-trailing-whitespace t)
   (add-hook 'before-save-hook #'delete-trailing-whitespace nil t))
-(add-hook 'prog-mode-hook  #'enable-trailing-whitespace)
+;; (add-hook 'prog-mode-hook  #'enable-trailing-whitespace)
 
 ;; Edit multiple regions in the same way simultaneously
 (use-package iedit

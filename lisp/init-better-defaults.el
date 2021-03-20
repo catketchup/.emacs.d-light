@@ -103,6 +103,8 @@
 ;; better default theme for terminal
 (load-theme 'manoj-dark t)
 
+(bind-key "C-x #" 'comment-line)
+
 (provide 'init-better-defaults)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init-better-defaults.el ends here
