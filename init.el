@@ -101,7 +101,12 @@
 (require 'init-helm)
 (require 'init-programming)
 (require 'init-python)
+
 (require 'init-ein)
+(require 'init-org)
+(require 'init-lisp)
+(require 'init-publish)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
 (require 'init-swiper)
