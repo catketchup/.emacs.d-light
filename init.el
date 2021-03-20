@@ -101,6 +101,7 @@
 (require 'init-helm)
 (require 'init-programming)
 (require 'init-python)
-
+(require 'init-ein)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
+(require 'init-swiper)

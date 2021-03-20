@@ -28,13 +28,17 @@
 ;; Python configurations
 ;;
 
-;;; Code:
+;; Code:
+;; (use-package yapfify
+;;   :diminish yapf-mode
+;;   ;; do not turn on unless told to do so
+;;   :hook (python-mode . yapf-mode)
+;;   ))
 
 ;; enable elpy
-;; (use-package elpy
-;;   :init
-;;   (elpy-enable))
+(use-package elpy
+  :ensure t
+  :init
+  (elpy-enable))
 
 (provide 'init-python)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; init-python.el ends here
