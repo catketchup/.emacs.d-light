@@ -98,6 +98,7 @@
   (exec-path-from-shell-initialize))
 
 
+(require 'init-swiper)
 (require 'init-better-defaults)
 (require 'init-helm)
 (require 'init-programming)
@@ -112,4 +113,4 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
-(require 'init-swiper)
+

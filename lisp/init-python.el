@@ -36,9 +36,10 @@
 ;;   ))
 
 ;; enable elpy
-(use-package elpy
-  :ensure t
-  :init
-  (elpy-enable))
+;; (use-package elpy
+;;   :ensure t
+;;   :init
+;;   (elpy-enable))
 
+(add-hook 'python-mode-hook 'linum-mode)
 (provide 'init-python)
