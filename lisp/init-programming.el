@@ -61,7 +61,7 @@
   :config (use-package yasnippet-snippets))
 
 ;; yasniper -> dependency of yasniper which i use
-(use-package helm-org-rifle)
+;; (use-package helm-org-rifle)
 
 (use-package yasniper
   :ensure nil
@@ -182,7 +182,7 @@
          ("C-x |" . mc/vertical-align-with-space)))
 
 ;; BUI for user interface
-(use-package bui)
+;; (use-package bui)
 
 ;; Use s library for string manipulation in lisp
 (use-package s

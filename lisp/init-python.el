@@ -41,5 +41,10 @@
 ;;   :init
 ;;   (elpy-enable))
 
-(add-hook 'python-mode-hook 'linum-mode)
+;; (add-hook 'python-mode-hook 'linum-mode)
+(use-package elpy
+  :ensure t
+  :init
+  (elpy-enable)
+  )
 (provide 'init-python)

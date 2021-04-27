@@ -106,10 +106,10 @@
 
 (require 'init-ein)
 (require 'init-org)
-(require 'init-lisp)
+;; (require 'init-lisp)
 (require 'init-utils)
 
-(require 'init-publish)
+;; (require 'init-publish)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
