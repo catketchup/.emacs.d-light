@@ -97,7 +97,7 @@
         exec-path-from-shell-arguments '("-l"))
   (exec-path-from-shell-initialize))
 
-
+(require 'use-package)
 (require 'init-swiper)
 (require 'init-better-defaults)
 (require 'init-helm)
