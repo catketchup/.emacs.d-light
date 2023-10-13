@@ -100,8 +100,6 @@
   :bind (:map help-map ("C-h" . which-key-C-h-dispatch))
   :hook (after-init . which-key-mode))
 
-;; better default theme for terminal
-(load-theme 'manoj-dark t)
 
 (bind-key "C-x #" 'comment-line)
 

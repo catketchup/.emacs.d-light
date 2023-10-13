@@ -1,2 +1,2 @@
-(load-theme 'wombat)
+(load-theme 'light-blue)
 (provide 'init-utils)
